@@ -2,7 +2,7 @@ import { format, formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/esm/locale'
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react'
 
-import { Avatar } from './avatar'
+import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
@@ -13,10 +13,10 @@ interface PostProps {
     avatarUrl: string
   },
   publishedAt: Date
-  content: [{
-    type: 'link' | 'paragraph'
+  content: {
+    type: string
     content: string
-  }]
+  }[]
 }
 
 export function Post({ author, publishedAt, content }: PostProps) {
